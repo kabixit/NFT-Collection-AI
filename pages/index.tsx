@@ -46,7 +46,7 @@ const Home: NextPage = () => {
             )}
             {!isContractTotalMintedLoading && (
               <Skeleton isLoaded={!isContractTotalMintedLoading}>
-                <Text fontSize="lg" fontWeight="bold" color="green.500">
+                <Text fontSize="lg" fontWeight="bold" mb={4} color="green.500">
                   Total Minted: {totalMinted.toNumber()}/3
                 </Text>
               </Skeleton>
@@ -55,15 +55,6 @@ const Home: NextPage = () => {
               <Web3Button
                 contractAddress="0x76dC6e5BB04006876Ee8F56383D9c628cBBbe10d"
                 action={(contract) => contract.erc721.claim(1)}
-                mt={4}
-                bg="blue.500"
-                color="white"
-                _hover={{ bg: "blue.600" }}
-                borderRadius="md"
-                paddingX={6}
-                paddingY={3}
-                fontSize="lg"
-                fontWeight="bold"
               >
                 Claim NFT
               </Web3Button>
