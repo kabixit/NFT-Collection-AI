@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           <Box>
             {!isContractMetadataLoading && (
               <Skeleton isLoaded={!isContractMetadataLoading}>
-                <MediaRenderer src={contractMetadata.image} />
+                <MediaRenderer src={contractMetadata?.image} />
               </Skeleton>
             )}
           </Box>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
             {!isContractMetadataLoading && (
               <Skeleton isLoaded={!isContractMetadataLoading}>
                 <Heading fontSize="2xl" fontWeight="bold" mb={4} color="blue.500">
-                  {contractMetadata.name}
+                  {contractMetadata?.name}
                 </Heading>
               </Skeleton>
             )}
